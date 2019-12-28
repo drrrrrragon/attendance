@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>考勤</title>
+	</head>
+<body>
+     <form action="./staff_update.php?id=<?=$arr['jobnum']?>" method="POST">
+          <p>职工号:<input type="text" name="jobnum" value="<?=$arr['jobnum']?>"></p>
+          <p>职工姓名:<input type="text" name="name" value="<?=$arr['name']?>"></p>
+          <p>职工所在部门:<input type="text" name="dept" value="<?=$arr['dept']?>"></p>
+          <p>部门领导:<input type="text" name="depthead" value="<?=$arr['depthead']?>"></p>
+          <p>
+               <input type="submit" value="更新">
+               <input type="button" value="返回" onclick="window.location='./staff_list.php'">
+          </p>
+     </form>
+</body>
+</html>
+

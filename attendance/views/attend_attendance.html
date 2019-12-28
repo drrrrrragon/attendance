@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>考勤</title>
+	</head>
+<body>
+	
+	<h2>考勤职工</h2>
+	<table>
+		<tr>
+				<th>工号</th>
+				<th>职工姓名</th>
+				<th>职工所在部门</th>
+				<th>部门领导</th>
+				<th>累计未通过数</th>
+				<th>成绩</th>
+		</tr>
+			   
+		<?php foreach($data1 as $k=>$v){?>	
+		<tr>
+				<td><?=$v['jobnum']?></td>
+				<td><?=$v['name']?></td>
+				<td><?=$v['dept']?></td>
+				<td><?=$v['depthead']?></td>
+				<td><?=$v['sum_fail']?></td>
+				<td><?=$v['score']?></td>
+		</tr>
+	   <?php }?>
+   <table>
+
+<br><br><br>
+<h2>全部职工</h2>
+<table>
+	<tr>
+			<th>工号</th>
+			<th>职工姓名</th>
+			<th>职工所在部门</th>
+			<th>部门领导</th>
+			<th>累计未通过数</th>
+			<th>成绩</th>
+	</tr>
+		   
+	<?php foreach($data2 as $k=>$v){?>	
+	<tr>
+			<td><?=$v['jobnum']?></td>
+			<td><?=$v['name']?></td>
+			<td><?=$v['dept']?></td>
+			<td><?=$v['depthead']?></td>
+			<td><?=$v['sum_fail']?></td>
+			<td><?=$v['score']?></td>
+	</tr>
+   <?php }?>
+<table>
+
+	<br><br><br>
+<h2>考勤记录</h2>
+<table>
+	<tr>
+			<th>工号</th>
+			<th>职工姓名</th>
+			<th>职工所在部门</th>
+			<th>部门领导</th>
+			<th>考勤数</th>
+			<th>考勤状态</th>
+	</tr>
+		   
+	<?php foreach($data3 as $k=>$v){?>	
+	<tr>
+			<td><?=$v['id']?></td>
+			<td><?=$v['name']?></td>
+			<td><?=$v['dept']?></td>
+			<td><?=$v['depthead']?></td>
+			<td><?=$v['num']?></td>
+			<td><?=$v['state']?></td>
+	</tr>
+   <?php }?>
+<table>
+
+<br><br><br>
+<a href="../apps/staff_list.php">返回</a>
+</body>
+</html>

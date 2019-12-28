@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>考勤</title>
+	</head>
+<body>
+	<p>首先在下面职工中选择考勤范围，<br>点击删除可以将职工从考勤范围中剔除，<br>剔除职工默认签到通过。</p>
+	<table>
+		<tr>
+			<th>工号</th>
+			<th>职工姓名</th>
+			<th>职工所在部门</th>
+			<th>部门领导</th>
+			<th>操作</th>
+		</tr>
+			   
+		<?php foreach($data as $k=>$v){?>	
+		<tr>
+			<td><?=$v['jobnum']?></td>
+			<td><?=$v['name']?></td>
+			<td><?=$v['dept']?></td>
+			<td><?=$v['depthead']?></td>
+			<td><a href="./attend_select_del.php?id=<?=$v['jobnum']?>">删除</a></td>
+		</tr>
+	    <?php }?>
+	</table>
+	   <br>
+	   <a href=" ../apps/attend_check.php">选择</a>
+</body>
+</html>

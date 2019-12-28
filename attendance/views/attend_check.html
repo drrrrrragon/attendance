@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>考勤</title>
+	</head>
+	<body>
+		<p>在以下考勤范围中为每个职工签到，<br>选中为签到通过，否则签到不通过。</p>
+		<form action="./attend_check_do.php" method="POST">
+			<table>
+				<tr>
+					<th>工号</th>
+					<th>职工姓名</th>
+					<th>职工所在部门</th>
+					<th>部门领导</th>
+					<th>签到</th>
+				</tr>
+
+				<?php foreach($data as $k=>$v){?>
+				<tr>
+					<td><?=$v['jobnum']?></td>
+					<td><?=$v['name']?></td>
+					<td><?=$v['dept']?></td>
+					<td><?=$v['depthead']?></td>
+					<td>
+						<input type="checkbox" name="attend[]" value="<?=$v['jobnum']?>">
+					</td>
+				</tr>
+				<?php }?>
+			</table>
+			<input type="reset" value="重置">
+			<input type="submit" value="查看结果">
+		</form>
+	</body>
+</html>
+

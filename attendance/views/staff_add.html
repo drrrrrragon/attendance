@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>考勤</title>
+	</head>
+<body>
+	<form action="./staff_add.php" method="POST">
+		<p>职工号:<input type="text" name="jobnum" value=""></p>
+		<p>职工姓名:<input type="text" name="name" value=""></p>
+		<p>职工所在部门:<input type="text" name="dept" value=""></p>
+		<p>部门领导:<input type="text" name="depthead" value=""></p>
+		<p>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+			<input type="button" value="返回" onclick="window.location='./staff_list.php'">
+		</p>
+	</form>
+</body>
+</html>
+

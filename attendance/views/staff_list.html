@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>考勤</title>
+	</head>
+<body>
+	<table>
+		<tr>
+			<th>工号</th>
+			<th>职工姓名</th>
+			<th>职工所在部门</th>
+			<th>部门领导</th>
+			<th>操作</th>
+		</tr>
+			   
+		<?php foreach($data as $k=>$v){?>	
+		<tr>
+			<td><?=$v['jobnum']?></td>
+			<td><?=$v['name']?></td>
+			<td><?=$v['dept']?></td>
+			<td><?=$v['depthead']?></td>
+			<td>
+				<a href="./staff_update.php?id=<?=$v['jobnum']?>">修改</a>
+				<a href="./staff_del.php?id=<?=$v['jobnum']?>">删除</a>
+			</td>
+		</tr>
+	   <?php }?>
+	</table>
+	   <a href="../apps/staff_add.php">添加职工</a>
+	   <br><br><br>
+	   <a href="../apps/attend_select_index.php">考勤</a>
+</body>
+</html>
