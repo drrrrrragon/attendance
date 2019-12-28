@@ -1,5 +1,5 @@
 # -
-linum+apache+mysql+php做的一个网页app。
+linux+apache+mysql+php做的一个网页app。
 --------------
 截图
 ------------
